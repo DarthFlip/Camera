@@ -1413,7 +1413,7 @@ class CamConfig(private val mActivity: MainActivity) {
         return CameraMode.entries.filter {
             when (it) {
                 CameraMode.CAMERA -> true
-                CameraMode.VIDEO -> !app.grapheneos.camera.util.isVideoDisabled()
+                CameraMode.VIDEO -> !app.grapheneos.camera.util.isVideoDisabled(mActivity)
                 CameraMode.QR_SCAN -> false // QR scan disabled
                 else -> {
                     check(it.extensionMode != ExtensionMode.NONE)

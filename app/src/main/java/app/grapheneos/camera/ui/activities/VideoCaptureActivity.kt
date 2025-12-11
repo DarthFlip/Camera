@@ -21,7 +21,7 @@ class VideoCaptureActivity : CaptureActivity() {
         super.onCreate(savedInstanceState)
 
         // Check if video recording is disabled via kt.novideo property
-        if (isVideoDisabled()) {
+        if (isVideoDisabled(this)) {
             Toast.makeText(this, "Video recording is disabled on this device", Toast.LENGTH_SHORT).show()
             finish()
             return

@@ -592,7 +592,7 @@ open class MainActivity : AppCompatActivity(),
                 // Switch to VIDEO mode (only if not recording and video is available)
                 if (!videoCapturer.isRecording &&
                     !camConfig.isVideoMode &&
-                    !app.grapheneos.camera.util.isVideoDisabled()) {
+                    !app.grapheneos.camera.util.isVideoDisabled(this)) {
                     // Find the VIDEO tab and call finalizeMode to animate tab selection
                     for (i in 0 until tabLayout.tabCount) {
                         val tab = tabLayout.getTabAt(i)
