@@ -19,6 +19,7 @@ import android.provider.MediaStore
 import android.provider.MediaStore.MediaColumns
 import android.provider.OpenableColumns
 import android.util.Log
+import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -657,6 +658,20 @@ class InAppGallery : AppCompatActivity() {
     fun showMessage(msg: String) {
         snackBar.setText(msg)
         snackBar.show()
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        when (keyCode) {
+            KeyEvent.KEYCODE_DPAD_LEFT -> {
+                gallerySlider.currentItem = gallerySlider.currentItem - 1
+                return true
+            }
+            KeyEvent.KEYCODE_DPAD_RIGHT -> {
+                gallerySlider.currentItem = gallerySlider.currentItem + 1
+                return true
+            }
+        }
+        return super.onKeyDown(keyCode, event)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

@@ -334,7 +334,7 @@ class VideoCapturer(private val mActivity: MainActivity) {
             mActivity.muteToggle.setImageResource(R.drawable.mic_on)
             mActivity.muteToggle.setBackgroundColor(mActivity.getColor(R.color.red))
             mActivity.muteToggle.tooltipText = mActivity.getString(R.string.tap_to_mute_audio)
-            mActivity.muteToggle.visibility = View.VISIBLE
+            mActivity.showMuteToggle()
         }
     }
 
@@ -387,7 +387,7 @@ class VideoCapturer(private val mActivity: MainActivity) {
         //   mActivity.micOffIcon.visibility = View.VISIBLE
 
         mActivity.settingsDialog.includeAudioToggle.isEnabled = true
-        mActivity.muteToggle.visibility = View.GONE
+        mActivity.hideMuteToggle()
 
         isRecording = false
 

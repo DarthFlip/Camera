@@ -171,9 +171,11 @@
             android:layout_marginBottom="8dp">
 
             <FrameLayout
+                android:id="@+id/mute_toggle_container"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:visibility="gone">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/mute_toggle"
@@ -184,8 +186,19 @@
                     app:contentPadding="8dp"
                     android:layout_gravity="center"
                     app:shapeAppearance="@style/ShapeAppearance.Image.PILL"
-                    android:tooltipText="@string/tap_to_mute_audio"
-                    android:visibility="gone" />
+                    android:tooltipText="@string/tap_to_mute_audio" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="top|center_horizontal"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+                    />
 
             </FrameLayout>
 
@@ -243,6 +256,18 @@
                     android:src="@drawable/flip_camera"
                     android:layout_gravity="center"
                     android:contentDescription="@string/flip_camera"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="top|center_horizontal"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+                    />
 
                 <ImageView
                     android:id="@+id/retake_icon"
@@ -358,6 +383,19 @@
                     android:layout_gravity="center"
                     android:visibility="gone"
                     android:indeterminate="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+                    />
 
                 <ImageView
                     android:id="@+id/play_preview"
@@ -496,7 +534,7 @@
 
         </FrameLayout>
 
-        <ImageButton
+        <FrameLayout
             android:id="@+id/settings_option"
             android:layout_alignParentTop="true"
             android:minWidth="48dp"
@@ -505,12 +543,33 @@
             android:layout_height="wrap_content"
             android:visibility="gone"
             tools:visibility="visible"
-            android:paddingHorizontal="16dp"
-            android:background="@null"
-            android:src="@drawable/settings_icon"
             android:layout_marginTop="16dp"
             android:focusable="false"
-            android:contentDescription="@string/capture_mode"/>
+            android:background="@null"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:background="@null"
+                android:src="@drawable/settings_icon"
+                android:contentDescription="@string/capture_mode"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:layout_gravity="top|end"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
+                />
+
+        </FrameLayout>
 
         <TextView
             android:id="@+id/timer"

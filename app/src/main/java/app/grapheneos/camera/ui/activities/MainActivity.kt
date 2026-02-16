@@ -168,7 +168,7 @@ open class MainActivity : AppCompatActivity(),
 
     lateinit var threeButtons: LinearLayout
 
-    lateinit var settingsIcon: ImageView
+    lateinit var settingsIcon: FrameLayout
 
     private lateinit var exposurePlusIcon: ImageView
     private lateinit var exposureNegIcon: ImageView
@@ -526,7 +526,7 @@ open class MainActivity : AppCompatActivity(),
 
     override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
         // Handle MENU key to open/close settings dialog
-        if (keyCode == KeyEvent.KEYCODE_MENU) {
+        if (keyCode == KeyEvent.KEYCODE_MENU || keyCode == KeyEvent.KEYCODE_0) {
             stopDpadZoom() // Stop any ongoing zoom
             if (settingsDialog.isShowing) {
                 settingsDialog.slideDialogUp()
@@ -549,6 +549,20 @@ open class MainActivity : AppCompatActivity(),
         }
 
         when (keyCode) {
+            KeyEvent.KEYCODE_1 -> {
+                if (videoCapturer.isRecording) {
+                    muteToggle.performClick()
+                }
+                return true
+            }
+            KeyEvent.KEYCODE_POUND -> {
+                thirdCircle.performClick()
+                return true
+            }
+            KeyEvent.KEYCODE_STAR -> {
+                flipCameraCircle.performClick()
+                return true
+            }
             KeyEvent.KEYCODE_VOLUME_DOWN,
             KeyEvent.KEYCODE_VOLUME_UP,
             KeyEvent.KEYCODE_CAMERA,
@@ -575,33 +589,13 @@ open class MainActivity : AppCompatActivity(),
             KeyEvent.KEYCODE_DPAD_LEFT -> {
                 stopDpadZoom() // Stop any ongoing zoom
                 // Switch to CAMERA mode (only if not recording and not already in camera mode)
-                if (!videoCapturer.isRecording && camConfig.isVideoMode) {
-                    // Find the CAMERA tab and call finalizeMode to animate tab selection
-                    for (i in 0 until tabLayout.tabCount) {
-                        val tab = tabLayout.getTabAt(i)
-                        if (tab?.tag == CameraMode.CAMERA) {
-                            finalizeMode(tab)
-                            break
-                        }
-                    }
-                }
+                onSwipeRight()
                 return true
             }
             KeyEvent.KEYCODE_DPAD_RIGHT -> {
                 stopDpadZoom() // Stop any ongoing zoom
                 // Switch to VIDEO mode (only if not recording and video is available)
-                if (!videoCapturer.isRecording &&
-                    !camConfig.isVideoMode &&
-                    !app.grapheneos.camera.util.isVideoDisabled(this)) {
-                    // Find the VIDEO tab and call finalizeMode to animate tab selection
-                    for (i in 0 until tabLayout.tabCount) {
-                        val tab = tabLayout.getTabAt(i)
-                        if (tab?.tag == CameraMode.VIDEO) {
-                            finalizeMode(tab)
-                            break
-                        }
-                    }
-                }
+                onSwipeLeft()
                 return true
             }
             KeyEvent.KEYCODE_DPAD_UP -> {
@@ -642,8 +636,10 @@ open class MainActivity : AppCompatActivity(),
         // Only handle other D-pad keys when settings dialog is not showing
         if (!settingsDialog.isShowing &&
             (keyCode == KeyEvent.KEYCODE_DPAD_CENTER || keyCode == KeyEvent.KEYCODE_ENTER ||
-            keyCode == KeyEvent.KEYCODE_DPAD_LEFT || keyCode == KeyEvent.KEYCODE_DPAD_RIGHT ||
-            keyCode == KeyEvent.KEYCODE_DPAD_UP || keyCode == KeyEvent.KEYCODE_DPAD_DOWN)) {
+                    keyCode == KeyEvent.KEYCODE_DPAD_LEFT || keyCode == KeyEvent.KEYCODE_DPAD_RIGHT ||
+                    keyCode == KeyEvent.KEYCODE_DPAD_UP || keyCode == KeyEvent.KEYCODE_DPAD_DOWN ||
+                    keyCode == KeyEvent.KEYCODE_STAR || keyCode == KeyEvent.KEYCODE_POUND ||
+                    keyCode == KeyEvent.KEYCODE_0 || keyCode == KeyEvent.KEYCODE_1)) {
             // Handle event to prevent default behavior
             return true
         }
@@ -1610,8 +1606,11 @@ open class MainActivity : AppCompatActivity(),
         wasSwiping = true
         if (settingsDialog.isShowing) return
 
-
-        val i = tabLayout.selectedTabPosition - 1
+        val i = if (resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL) {
+            tabLayout.selectedTabPosition + 1
+        } else {
+            tabLayout.selectedTabPosition - 1
+        }
 
         Log.i(TAG, "onSwipeRight $i")
         tabLayout.getTabAt(i)?.let {
@@ -1633,7 +1632,12 @@ open class MainActivity : AppCompatActivity(),
         wasSwiping = true
         if (settingsDialog.isShowing) return
 
-        val i = tabLayout.selectedTabPosition + 1
+        val i = if (resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL) {
+            tabLayout.selectedTabPosition - 1
+        } else {
+            tabLayout.selectedTabPosition + 1
+        }
+
         tabLayout.getTabAt(i)?.let {
             finalizeMode(it)
         }
@@ -1976,6 +1980,14 @@ open class MainActivity : AppCompatActivity(),
             shouldRestartRecording = false
             videoCapturer.startRecording()
         }
+    }
+
+    fun showMuteToggle() {
+        binding.muteToggleContainer.visibility = View.VISIBLE
+    }
+
+    fun hideMuteToggle() {
+        binding.muteToggleContainer.visibility = View.GONE
     }
 
     private fun startDpadZoom(direction: Int) {
