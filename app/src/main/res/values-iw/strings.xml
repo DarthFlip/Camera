@@ -1,0 +1,201 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="camera_permission_dialog_title">נדרשת הרשאת מצלמה</string>
+    <string name="camera_permission_dialog_message">
+        האפליקציה זקוקה להרשאת גישה למצלמה כדי לפעול. אנא אשור את ההרשאה הנדרשת דרך ההגדרות כדי להשתמש באפליקציה זו.
+    </string>
+
+    <string name="audio_permission_dialog_title">נדרשת הרשאת שמע</string>
+    <string name="audio_permission_dialog_message">האפליקציה זקוקה להרשאת גישה למיקרופון כדי להקליט וידאו הכולל שמע. אנא אשור את ההרשאה הנדרשת דרך ההגדרות כדי להמשיך. אם אינך זקוק לשמע בוידאו, ניתן לבטל אפשרות זו (ולהפעילה מחדש מאוחר יותר בהגדרות).</string>
+
+    <string name="location_permission_dialog_title">נדרשת הרשאת מיקום</string>
+    <string name="location_permission_dialog_message">
+        האפליקציה זקוקה להרשאת מיקום לצורך תיוג גיאוגרפי (Geo-tagging). אנא אשור את ההרשאה הנדרשת דרך ההגדרות כדי להשתמש באפליקציה זו.
+    </string>
+
+    <string name="focus_ring">טבעת מיקוד</string>
+    <string name="flip_camera">החלף מצלמה</string>
+    <string name="loading_camera">טוען מצלמה</string>
+    <string name="flash_mode">מצב פלאש</string>
+    <string name="capture_mode">מצב צילום</string>
+    <string name="start_value_timer">00:00</string>
+    <string name="zoom_in">הגדלה (Zoom In)</string>
+    <string name="zoom_out">הקטנה (Zoom Out)</string>
+    <string name="scan_result">תוצאת סריקה</string>
+    <string name="share_qr_text">שתף קישור QR</string>
+    <string name="open_with">פתח באמצעות</string>
+    <string name="copy_to_clipboard">העתק ללוח</string>
+    <string name="retake">צלם שוב</string>
+    <string name="play_preview">נגן תצוגה מקדימה</string>
+    <string name="toggle_button">כפתור החלפה</string>
+    <string name="aspect_ratio">יחס גובה-רוחב</string>
+    <string name="toggle_flash">הפעל/כבה פלאש</string>
+    <string name="grid_toggle">הצג/הסתר רשת</string>
+    <string name="include_audio">כלול שמע</string>
+    <string name="enable_eis">הפעל ייצוב (EIS)</string>
+    <string name="video_quality">איכות וידאו</string>
+    <string name="optimize_for">מטב עבור</string>
+    <string name="quality">איכות</string>
+    <string name="latency">שיהוי (Latency)</string>
+    <string name="preview">תצוגה מקדימה</string>
+    <string name="file_info">פרטי קובץ</string>
+    <string name="delete_file">מחק קובץ</string>
+    <string name="edit">ערוך</string>
+    <string name="self_illumination">תאורה עצמית</string>
+    <string name="focus_timeout">פסק זמן למיקוד</string>
+    <string name="timer">טיימר</string>
+    <string name="cancel_timer">בטל טיימר</string>
+    <string name="video_capture_label">הקלט וידאו</string>
+
+    <string name="camera">מצלמה</string>
+    <string name="video">וידאו</string>
+    <string name="portrait_mode">דיוקן</string>
+    <string name="hdr_mode">HDR</string>
+    <string name="night_mode">לילה</string>
+    <string name="face_retouch_mode">ריטוש פנים</string>
+    <string name="auto_mode">אוטומטי</string>
+    <string name="qr_scan_mode">סריקת QR</string>
+    <string name="aspect_ratio_16_9">16:9</string>
+    <string name="aspect_ratio_4_3">4:3</string>
+    <string name="share_media">שתף מדיה</string>
+    <string name="edit_with">ערוך באמצעות</string>
+    <string name="rec_without_audio">התחל הקלטה ללא שמע</string>
+    <string name="qr_scan_toggle">מתג סריקת QR</string>
+    <string name="qr_scan">קוד QR</string>
+    <string name="data_matrix">Data Matrix</string>
+    <string name="aztec_code">Aztec Code</string>
+    <string name="more_options">אפשרויות נוספות</string>
+    <string name="pdf_417">PDF 417</string>
+    <string name="more_settings">הגדרות נוספות</string>
+
+    <string name="general">כללי</string>
+
+    <string name="save_image_as_previewed">שמור תמונה כפי שמוצגת</string>
+    <string name="save_as_image_preview_desc">שמור את הפלט כפי שהוא נראה בתצוגה המקדימה (מתקן היפוך במצלמה הקדמית)</string>
+
+    <string name="save_video_as_previewed">שמור וידאו כפי שמוצג</string>
+    <string name="save_as_video_preview_desc">שמור את וידאו הפלט כפי שהוא נראה בתצוגה המקדימה (מתקן היפוך במצלמה הקדמית)</string>
+
+    <string name="gyroscope_suggestions">הצעות גירוסקופ</string>
+    <string name="gyroscope_setting_desc">קבל מדי פעם הצעות ויזואליות ליישור התמונה או שיפור הזווית</string>
+
+    <string name="camera_sounds">צלילי מצלמה</string>
+    <string name="camera_sounds_desc">צליל צמצם וחיוויים קוליים אחרים</string>
+
+    <string name="storage">אחסון</string>
+    <string name="storage_location">מיקום אחסון</string>
+    <string name="image_file_name_format">פורמט שם קובץ תמונה</string>
+    <string name="video_file_name_format">פורמט שם קובץ וידאו</string>
+    <string name="revert_back_to_dcim">חזור לתיקיית DCIM</string>
+
+    <string name="image_quality">איכות תמונה</string>
+    <string name="image_quality_desc" formatted="false">כוונן את איכות התמונה המצולמת באפליקציה בין 1% ל-100%.</string>
+    <string name="photo">תמונה</string>
+    <string name="remove_exif_title">הסר נתוני EXIF לאחר הצילום</string>
+    <string name="remove_exif_subtitle">הערה: אפשרות תיוג גיאוגרפי/מיקום אינה תלויה בהגדרה זו</string>
+    <string name="video_setting_title">וידאו</string>
+    <string name="degree_format">%d°</string>
+    <string name="percent_symbol">%</string>
+
+    <string name="location_is_disabled">המיקום כבוי</string>
+    <string name="settings">הגדרות</string>
+    <string name="enable">הפעל</string>
+    <string name="ok">אישור</string>
+    <string name="yes">כן</string>
+    <string name="no">לא</string>
+    <string name="disable_audio">בטל שמע</string>
+    <string name="copied_text_to_clipboard">הטקסט הועתק ללוח</string>
+    <string name="share_text_via">שתף טקסט באמצעות</string>
+
+    <string name="unable_to_obtain_file_details">לא ניתן לקבל את פרטי הקובץ</string>
+
+    <string name="no_editor_app_error">ייתכן שאין לך אפליקציה מתאימה לעריכת תוכן זה</string>
+    <string name="edit_not_allowed">עריכת תמונות במצב מאובטח אינה מותרת.</string>
+    <string name="sharing_not_allowed">שיתוף תמונות במצב מאובטח אינו מותר.</string>
+    <string name="edit_image">ערוך תמונה</string>
+    <string name="share_image">שתף תמונה</string>
+    <string name="delete">מחק</string>
+    <string name="delete_title">האם אתה בטוח?</string>
+    <string name="deleted_successfully">הקובץ נמחק בהצלחה</string>
+    <string name="deleting_unexpected_error">אירעה שגיאה לא צפויה בעת מחיקת הקובץ</string>
+    <string name="delete_description">"האם אתה באמת רוצה למחוק קובץ זה (%s)?"</string>
+    <string name="cancel">ביטול</string>
+    <string name="no_image">אנא צלם תמונה/וידאו לפני הניסיון לצפות בהם.</string>
+
+    <string name="empty_gallery">לא נמצאו תמונות/סרטונים שצולמו</string>
+
+    <string name="bind_failure">פתיחת המצלמה נכשלה עקב בעיית מערכת הפעלה או חומרה. נסה להפעיל מחדש.</string>
+    <string name="camera_provider_init_failure">טעינת ספק המצלמה נכשלה עקב בעיית מערכת הפעלה או חומרה. נסה להפעיל מחדש.</string>
+    <string name="extensions_manager_init_failure">טעינת מנהל ההרחבות נכשלה עקב בעיית מערכת הפעלה או חומרה. מצבי הרחבה אינם זמינים. נסה להפעיל מחדש.</string>
+    <string name="unsupported_taking_picture_while_recording">המכשיר שלך אינו תומך בצילום תמונות בזמן הקלטת וידאו עם ההגדרות הנוכחיות.</string>
+    <string name="location_unavailable">לא ניתן לצרף מיקום לתמונה/וידאו מכיוון שהוא אינו זמין כרגע</string>
+    <string name="existing_no_image">לא נמצאה תמונה. יוצא מהגלריה הפנימית.</string>
+    <string name="no_barcode_selected">אנא וודא שלפחות סוג ברקוד אחד נבחר במצב ידני</string>
+    <string name="flash_unavailable_in_selected_mode">הפלאש אינו זמין במצב הנוכחי.</string>
+    <string name="front_camera_unavailable">לא ניתן לזהות מצלמה קדמית. אנא נסה שוב מאוחר יותר!</string>
+    <string name="rear_camera_unavailable">לא ניתן לזהות מצלמה אחורית. אנא נסה שוב מאוחר יותר!</string>
+    <string name="qr_rear_camera_unavailable">נראה שהמצלמה האחורית אינה זמינה. משתמש במצלמה הקדמית למצב QR במקום זאת.</string>
+    <string name="folder_not_found">מיקום האחסון לא נמצא</string>
+    <string name="reverting_to_default_folder">חוזר לתיקיית ברירת המחדל DCIM מכיוון שמיקום האחסון המותאם אישית שנבחר בעבר כנראה נמחק. אנא שנה את מיקום האחסון לתיקייה אחרת (במידת הצורך).</string>
+    <string name="more_settings_unavailable_during_recording">לא ניתן לעבור בין מסכים בזמן הקלטה</string>
+    <string name="toggle_geo_tagging_unsupported_while_recording">לא ניתן לשנות הגדרת תיוג גיאוגרפי בזמן הקלטה פעילה</string>
+    <string name="flash_switch_unsupported">לא ניתן להחליף מצב פלאש במצב זה</string>
+    <string name="four_by_three_unsupported_in_video">יחס 4:3 אינו נתמך במצב וידאו</string>
+    <string name="flash_unavailable_in_current_mode">פלאש/פנס אינם זמינים עבור מצב זה</string>
+    <string name="unexpected_error_while_setting_focus_timeout">אירעה שגיאה לא צפויה בעת הגדרת פסק זמן למיקוד</string>
+    <string name="storage_location_updated">מיקום האחסון עודכן בהצלחה ל-%s</string>
+    <string name="no_directory_selected">לא נבחרה תיקייה</string>
+    <string name="choose_storage_location">בחר מיקום אחסון</string>
+    <string name="are_you_sure">האם אתה בטוח?</string>
+    <string name="revert_to_default_directory">האם ברצונך לחזור לתיקיית ברירת המחדל?</string>
+    <string name="reverted_to_default_directory">הוחזר למיקום האחסון של ברירת המחדל</string>
+    <string name="already_using_default_directory">כבר משתמש במיקום האחסון של ברירת המחדל</string>
+    <string name="photo_quality_number_limit" tools:ignore="PluralsCandidate">איכות התמונה יכולה להיות רק בין %1$d ל-%2$d</string>
+    <string name="image_taken_in_this_mode_does_not_contain_extra_data">תמונות שצולמו במצב זה אינן מכילות נתוני EXIF נוספים</string>
+    <string name="file_already_exists">הקובץ כבר קיים בנתיב %s</string>
+    <string name="file_does_not_exist">הקובץ אינו קיים בנתיב %s</string>
+    <string name="couldnt_exclude_qr_format">לא ניתן להחריג את פורמט %s. אנא וודא שלפחות פורמט אחד נבחר במצב ידני.</string>
+
+    <string name="capturing_image">מצלם תמונה…</string>
+    <string name="image_captured_successfully">התמונה צולמה בהצלחה</string>
+    <string name="unable_to_capture_image">לא ניתן לצלם תמונה</string>
+    <string name="unable_to_capture_image_verbose">לא ניתן לצלם תמונה, קוד שגיאה: %d</string>
+    <string name="unable_to_save_image">לא ניתן לשמור את התמונה</string>
+    <string name="unable_to_save_image_verbose">לא ניתן לשמור את התמונה, שגיאה אירעה במהלך: %s</string>
+    <string name="show_details">הצג פרטים</string>
+    <string name="recording_too_short_to_be_saved">ההקלטה קצרה מכדי להישמר</string>
+    <string name="unable_to_save_video">לא ניתן לשמור וידאו זה</string>
+    <string name="unable_to_save_video_verbose">לא ניתן לשמור וידאו זה, קוד שגיאה: %d</string>
+    <string name="error_during_recording">אירעה שגיאה בעת סיום ההקלטה הנוכחית, קוד שגיאה: %d</string>
+    <string name="unable_to_access_output_file">לא ניתן לגשת לקובץ הפלט</string>
+    <string name="please_wait_for_image_to_get_captured_before_sharing">אנא המתן לצילום התמונה לפני ניסיון שיתוף בלחיצה ארוכה</string>
+
+    <string name="file_details">פרטי קובץ</string>
+    <string name="file_name_generic">שם הקובץ: </string>
+    <string name="not_found_generic">לא נמצא</string>
+    <string name="loading_generic">טוען…</string>
+    <string name="file_size">גודל הקובץ: </string>
+    <string name="file_path">נתיב הקובץ: </string>
+    <string name="file_created_on">הקובץ נוצר ב: </string>
+    <string name="last_modified_on">שונה לאחרונה ב: </string>
+
+    <string name="inaccessible_image">התמונה %s אינה נגישה</string>
+    <string name="inaccessible_video">הוידאו %s אינו נגיש</string>
+
+    <string name="main_storage">אחסון ראשי</string>
+
+    <string name="zsl_setting_title">הפעל Zero Shutter Lag (ZSL)</string>
+    <string name="zsl_setting_desc">משתמש ב-ZSL לצילום תמונה מהיר יותר. מתעלם מהגדרת ההמתנה למיקוד. במכשירים מסוימים היישום של תכונה זו עשוי להיות לקוי.</string>
+    <string name="audio_permission_failed_in_recording">לא ניתן לבקש הרשאת שמע במהלך הקלטה</string>
+
+    <string name="tap_to_mute_audio">הקש להשתקת השמע</string>
+    <string name="tap_to_unmute_audio">הקש לביטול השתקת השמע</string>
+
+    <string name="video_audio_recording_muted">הקלטת השמע בוידאו הושתקה</string>
+    <string name="video_audio_recording_unmuted">הקלטת השמע בוידאו הופעלה מחדש</string>
+
+    <string name="highest_res_setting">השתמש ברזולוציית תמונה מקסימלית</string>
+    <string name="highest_res_setting_desc">אפשר שימוש ברזולוציה הגבוהה ביותר הנתמכת עבור תמונות במקום בברירת המחדל. הדבר עשוי להוביל לקבצי תמונה גדולים מאוד במכשירים מסוימים.</string>
+
+    <string name="wait_for_focus_lock">המתן לנעילת מיקוד</string>
+    <string name="invalid_photo_quality_value">הוגדר ערך לא חוקי לאיכות התמונה</string>
+</resources>
